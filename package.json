@@ -1,0 +1,22 @@
+{
+  "name": "Google-Calendar",
+  "version": "1.0.0",
+  "description": "A minimal Electron application wrapping Google Calendar",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packager": "electron-packager . 'Google Calendar' --platform=darwin --arch=x64 --icon logo.png.icns --out dist/ --overwrite"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "Google",
+    "Calendar"
+  ],
+  "author": "James Chevalier <james.chevalier@commonmedia.com>",
+  "license": "CC0-1.0",
+  "private": true,
+  "devDependencies": {
+    "electron": "~1.8.4"
+  }
+}

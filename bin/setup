@@ -1,0 +1,34 @@
+#!/bin/bash
+
+source ~/.bashrc
+
+if hash nvm 2>/dev/null; then
+  echo '===> Switching NodeJS version with NVM'
+  nvm use
+else
+  read -p "NVM is required, would you like this installed now? " -n 1 -r
+  echo
+  if [[ ! $REPLY =~ ^[Yy]$ ]]
+  then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+  fi
+
+  echo '===> Installing NVM, for Node.JS version management'
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  nvm use
+fi
+
+echo '===> Updating npm to the latest version'
+npm -g i npm
+
+echo '===> Installing Electron globally'
+npm -g i electron
+
+echo '===> Installing Electron Packager globally'
+npm -g i electron-packager
+
+echo '===> Installing required packages'
+npm i
