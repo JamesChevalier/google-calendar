@@ -9,7 +9,7 @@ Table of Contents
 
 ## Versions
 
-- Electron 2.0.2
+- Electron 2.0.4
 - NodeJS 8.9.3
 
 ## Setup
