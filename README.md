@@ -9,12 +9,12 @@ Table of Contents
 
 ## Versions
 
-- Electron 2.0.4
-- NodeJS 8.9.3
+- Electron 3.0.6
+- NodeJS 10.2.0
 
 ## Setup
 
-- You must have Node version 8.9.3 installed
+- You must have Node version 10.2.0 installed
 - Clone the repository
     - `git clone git@bitbucket.org:commonmedia/google-calendar.git`
 - Enter the newly cloned repository
